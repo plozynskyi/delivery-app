@@ -21,9 +21,9 @@ import initialState from './initialState';
 import fields from './fields';
 
 import {
-  ShopWrapper,
+  ShoppingCartWrapper,
   BusketForm,
-  ShopsWrapper,
+  UserWrapper,
   ProductsWrapper,
   TitleWrapper,
   SubmitWrapper,
@@ -74,8 +74,8 @@ const ShoppingPage = () => {
 
   return (
     <BusketForm onSubmit={handleSubmit}>
-      <ShopWrapper>
-        <ShopsWrapper>
+      <ShoppingCartWrapper>
+        <UserWrapper>
           <TitleWrapper>Order details:</TitleWrapper>
           <InputField
             classes={{ color: 'red' }}
@@ -102,7 +102,7 @@ const ShoppingPage = () => {
             {...fields.address}
             margin="dense"
           />
-        </ShopsWrapper>
+        </UserWrapper>
         <ProductsWrapper>
           {Number(busketLength) ? (
             <Button
@@ -117,7 +117,7 @@ const ShoppingPage = () => {
           )}
           {Number(busketLength) ? <BusketProducts /> : ''}
         </ProductsWrapper>
-      </ShopWrapper>
+      </ShoppingCartWrapper>
       <SubmitWrapper>
         <TotalPrice>{`Total price - ${totalPrice.toFixed(2)}`}</TotalPrice>
         {busketLength ? (

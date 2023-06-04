@@ -15,7 +15,6 @@ const prodSlice = createSlice({
           return;
         }
         state.push({ ...payload, quantity: 1 });
-        console.log(state);
       },
       prepare: data => {
         return {

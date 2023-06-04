@@ -1,45 +1,66 @@
 import styled from 'styled-components';
 
-const ShopWrapper = styled.div`
+const ShoppingCartWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
+    flex-direction: row;
   }
 `;
 
 const BusketForm = styled.form`
+  padding-top: 50px;
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    padding-top: 50px;
   }
 `;
 
-const ShopsWrapper = styled.div`
+const UserWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  min-width: 100%;
+
+  border: 2px solid ${({ theme }) => theme.colors.blue};
+  border-radius: 5px;
+  box-shadow: ${({ theme }) => theme.boxShadows.main};
+
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    min-width: 100%;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    display: flex;
-    flex-direction: column;
     padding: 50px;
-
     min-width: 464px;
-
-    border: 2px solid ${({ theme }) => theme.colors.blue};
-    border-radius: 20px;
-
-    box-shadow: ${({ theme }) => theme.boxShadows.main};
   }
 `;
 
 const ProductsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 100%;
+
+  border: 2px solid ${({ theme }) => theme.colors.blue};
+  border-radius: 5px;
+
+  box-shadow: ${({ theme }) => theme.boxShadows.main};
+
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 20px 20px;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -49,6 +70,7 @@ const ProductsWrapper = styled.div`
 
     width: 100%;
     height: 606px;
+
     overflow-y: scroll;
 
     ::-webkit-scrollbar {
@@ -67,38 +89,43 @@ const ProductsWrapper = styled.div`
       border-radius: 15px;
       background: #998686;
     }
-
-    border: 2px solid ${({ theme }) => theme.colors.blue};
-    border-radius: 5px;
-
-    box-shadow: ${({ theme }) => theme.boxShadows.main};
   }
 `;
 
 const TitleWrapper = styled.h3`
+  text-align: center;
+  margin-bottom: 10px;
+
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin-bottom: 15px;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    text-align: center;
     margin-bottom: 25px;
   }
 `;
 
 const SubmitWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
   }
 `;
 
 const TotalPrice = styled.p`
+  font-family: ${({ theme }) => theme.fonts.main.semiBold};
+  font-size: ${({ theme }) => theme.fontSizes[3]};
+
+  color: ${({ theme }) => theme.colors.blue};
+
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   }
 
@@ -111,9 +138,9 @@ const TotalPrice = styled.p`
 `;
 
 export {
-  ShopWrapper,
+  ShoppingCartWrapper,
   BusketForm,
-  ShopsWrapper,
+  UserWrapper,
   ProductsWrapper,
   TitleWrapper,
   SubmitWrapper,

@@ -64,25 +64,41 @@ const Link = styled(NavLink)`
 `;
 
 const BusketLengthWrapper = styled.div`
+  position: absolute;
+  right: -35px;
+  top: -10px;
+
+  width: 20px;
+  height: 20px;
+  border: 2px solid ${({ theme }) => theme.colors.blue};
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: ${({ theme }) => theme.colors.blue};
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    right: -35px;
+    top: -10px;
+
+    width: 25px;
+    height: 25px;
+
+    font-size: 18px;
+    font-weight: 500;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    position: absolute;
     right: 0;
     top: -10px;
 
     width: 35px;
     height: 35px;
-    border: 2px solid ${({ theme }) => theme.colors.blue};
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+    font-size: 18px;
     font-weight: 500;
-
-    color: ${({ theme }) => theme.colors.blue};
   }
 `;
 

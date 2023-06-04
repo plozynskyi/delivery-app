@@ -20,6 +20,5 @@ export const getCurrentShop = ({ busket }) => {
   const current = busket.busket.map(({ shop, shopTitle }) => {
     return { shop, shopTitle };
   });
-  console.log(current);
   return current || null;
 };

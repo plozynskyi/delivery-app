@@ -9,11 +9,11 @@ const ProductsList = styled.ul`
   gap: 20px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    justify-content: flex-start;
+    justify-content: center;
   }
 `;
 

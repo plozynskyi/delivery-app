@@ -31,12 +31,10 @@ const BusketProducts = () => {
 
   const removeProd = id => {
     dispatch(deleteProd(id));
-    console.log(products);
   };
 
   const addProd = id => {
     dispatch(addQuantityProd(id));
-    console.log(products);
   };
 
   const productItem = uniqueProducts.map(item => {
@@ -50,7 +48,6 @@ const BusketProducts = () => {
           <Button
             text="Add"
             clickHandler={() => {
-              console.log(item._id);
               addProd(item._id);
             }}
             type="button"
