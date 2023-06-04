@@ -1,15 +1,13 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import {
-  MainContainer,
-  MainTitle,
-  ImageContainer,
-  ImageOne,
-  ImageTwo,
-  ImageThree,
-} from './MainPage.styled';
+import Button from 'shared/components/Button/Button';
+
+import { MainContainer, MainTitle } from './MainPage.styled';
 
 const MainPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.body.classList.add('no-scroll');
 
@@ -18,12 +16,12 @@ const MainPage = () => {
 
   return (
     <MainContainer>
-      <MainTitle>Take good care of your small pets</MainTitle>
-      <ImageContainer>
-        <ImageOne alt="Cute buldog" />
-        <ImageTwo alt="Cute dog" />
-        <ImageThree alt="Cute cat" />
-      </ImageContainer>
+      <MainTitle>Order the best products with fast delivery</MainTitle>
+      <Button
+        type="button"
+        text={'Go to order'}
+        clickHandler={() => navigate('/shop')}
+      />
     </MainContainer>
   );
 };

@@ -1,6 +1,7 @@
 export const routes = {
-  SHOP: '/',
+  SHOP: '/shop',
+  SHOPDETAILS: '/shop/:shopId',
   SHOPPING: '/shopping',
-  HISTORY: '/histiry',
+  HISTORY: '/history',
   COUPONS: '/coupons',
 };

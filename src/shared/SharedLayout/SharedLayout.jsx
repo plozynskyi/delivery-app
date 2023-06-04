@@ -1,22 +1,18 @@
-import Header from 'shared/components/Header/Header';
-import Section from 'shared/components/Section/Section';
-import Container from 'shared/components/Container/Container';
-import Footer from 'shared/components/Footer/Footer';
-import BtnScrollToTop from './../components/BtnScrollToTop/BtnScrollToTop';
-import { useWindowSize } from 'hooks/useResize';
+import Header from './../components/Header/Header';
+import Section from './../components/Section/Section';
+import Container from './../components/Container/Container';
+import BtnScrollToTop from 'shared/components/BtnScrollToTop/BtnScrollToTop';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ContentWrapper, Main } from './SharedLayout.styled';
 
 const SharedLayout = () => {
-  const [screenWidth, screenHeight] = useWindowSize();
-
   return (
     <>
       <ContentWrapper>
         <BtnScrollToTop />
         <Header />
-        <Main screenHeight={screenHeight} screenWidth={screenWidth}>
+        <Main>
           <Section>
             <Container>
               <Suspense fallback={null}>
@@ -26,7 +22,6 @@ const SharedLayout = () => {
           </Section>
         </Main>
       </ContentWrapper>
-      <Footer />
     </>
   );
 };
