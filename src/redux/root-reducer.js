@@ -2,8 +2,6 @@ import { combineReducers } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-// import { shopsReducer } from './shops/slice';
-// import { productsReducer } from './products/slice';
 import { prodReducer } from './busket/busket-slice';
 
 export const rootReducer = combineReducers({
@@ -12,6 +10,7 @@ export const rootReducer = combineReducers({
 
 const persistConfig = {
   key: 'busket',
+  version: 1,
   storage,
 };
 
