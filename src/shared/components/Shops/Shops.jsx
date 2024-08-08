@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 
-import { getCurrentShop } from 'redux/busket/busket-selectors';
+import { getCurrentShop } from '../../../redux/busket/busket-selectors';
 
 import { ShopsList, ShopItem, LinkElem } from './shops.styled';
 

@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { fetchProducts } from 'redux/products/operations';
-import { getAllProducts } from 'redux/products/selectors';
+import { fetchProducts } from '../../../redux/products/operations';
+import { getAllProducts } from '../../../redux/products/selectors';
 
-import { addProd } from 'redux/busket/busket-slice';
+import { addProd } from '../../../redux/busket/busket-slice';
 
-import { loading, error } from 'redux/products/selectors';
+import { loading, error } from '../../../redux/products/selectors';
 
 import Button from '../Button/Button';
 import Loader from 'shared/Loader/Loader';

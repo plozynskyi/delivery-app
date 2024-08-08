@@ -2,9 +2,9 @@ import { useSelector } from 'react-redux';
 
 import { navData } from './navData';
 
-import { getTotalBusketLength } from 'redux/busket/busket-selectors';
+import { getTotalBusketLength } from '../../../redux/busket/busket-selectors';
 
-import { isUserLogin } from 'redux/auth/auth-selector';
+import { isUserLogin } from '../../../redux/auth/auth-selector';
 
 import { List, Item, Link, BusketLengthWrapper } from './Nav.styled';
 

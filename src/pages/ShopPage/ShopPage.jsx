@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
-import { fetchShops } from './../../redux/shops/operations.js';
-import { getAllShops } from './../../redux/shops/selectors.js';
-import { loading, error } from 'redux/shops/selectors';
+import { fetchShops } from '../../redux/shops/operations';
+import { getAllShops } from '../../redux/shops/selectors';
+import { loading, error } from '../../redux/shops/selectors';
 
 import Shops from './../../shared/components/Shops/Shops.jsx';
 

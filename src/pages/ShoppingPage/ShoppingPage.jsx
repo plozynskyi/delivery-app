@@ -1,6 +1,8 @@
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback } from 'react';
+
+// import { useRef } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -10,15 +12,15 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import BusketProducts from 'shared/components/BusketProducts/BusketProducts.jsx';
 
-import { deleteAllProd } from 'redux/busket/busket-slice';
+import { deleteAllProd } from '../../redux/busket/busket-slice';
 import {
   getBusket,
   getBusketLength,
   getBusketTotalPrice,
-} from 'redux/busket/busket-selectors.js';
+} from '../../redux/busket/busket-selectors';
 
-import { addOrder } from 'redux/order/operations';
-import { getUser } from 'redux/auth/auth-selector';
+import { addOrder } from '../../redux/order/operations';
+import { getUser } from '../../redux/auth/auth-selector';
 
 import Button from 'shared/components/Button/Button.jsx';
 import InputField from 'shared/components/TextField/InputField';
@@ -35,13 +37,13 @@ import {
   TotalPrice,
 } from './shopping-page-styled.jsx';
 
-import { reCaptcha } from 'shared/services/api-captcha';
+// import { reCaptcha } from 'shared/services/api-captcha';
 
 const ShoppingPage = () => {
   const busket = useSelector(getBusket);
   const user = useSelector(getUser);
   const totalPrice = useSelector(getBusketTotalPrice);
-  const captchaRef = useRef(null);
+  // const captchaRef = useRef(null);
   const [state, setState] = useState({
     ...initialState,
     busket: busket,
@@ -66,11 +68,11 @@ const ShoppingPage = () => {
     e.preventDefault();
     // const inputVal = await e.target[0].value;
 
-    const token = captchaRef.current.getValue();
+    // const token = captchaRef.current.getValue();
 
-    reCaptcha(token);
+    // reCaptcha(token);
 
-    captchaRef.current.reset();
+    // captchaRef.current.reset();
 
     setState({ ...state });
     dispatch(addOrder(state));
@@ -142,7 +144,7 @@ const ShoppingPage = () => {
         </ProductsWrapper>
       </ShoppingCartWrapper>
       <SubmitWrapper>
-        <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef} />
+        {/* <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef} /> */}
         <TotalPrice>{`Total price - ${totalPrice.toFixed(2)}`}</TotalPrice>
         {busketLength ? (
           <Button type="submit" text={'Submit'} />

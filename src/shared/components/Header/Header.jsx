@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { isUserLogin } from 'redux/auth/auth-selector';
+import { isUserLogin } from '../../../redux/auth/auth-selector';
 
 import Container from '../Container/Container';
 import Logo from '../Logo/Logo';

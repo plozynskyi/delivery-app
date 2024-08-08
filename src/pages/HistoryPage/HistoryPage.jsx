@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
-import { getAllOrderUser } from 'redux/history/operations';
-import { getAllOrdersUser } from 'redux/history/selectors';
+import { getAllOrderUser } from '../../redux/history/operations';
+import { getAllOrdersUser } from '../../redux/history/selectors';
 
 import {
   HistoryWrapper,

@@ -1,7 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { getBusket } from 'redux/busket/busket-selectors';
-import { deleteProd, addQuantityProd } from 'redux/busket/busket-slice';
+import { getBusket } from '../../../redux/busket/busket-selectors';
+import {
+  deleteProd,
+  addQuantityProd,
+} from '../../../redux/busket/busket-slice';
 
 import Button from '../Button/Button';
 

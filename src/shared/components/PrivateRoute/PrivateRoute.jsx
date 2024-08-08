@@ -2,7 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
 
-import { getAuth } from 'redux/auth/auth-selector';
+import { getAuth } from '../../../redux/auth/auth-selector';
 
 const PrivateRoute = () => {
   const { isLogin, token } = useSelector(getAuth);

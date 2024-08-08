@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { signin } from 'redux/auth/auth-operations';
+import { signin } from '../../../redux/auth/auth-operations';
 
 import LoginForm from 'shared/components/LoginForm/LoginForm';
 

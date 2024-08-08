@@ -3,10 +3,10 @@ import { lazy, Suspense } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import Loader from 'shared/Loader/Loader';
+import Loader from './shared/Loader/Loader';
 import { routes } from 'routes';
 
-import { current } from 'redux/auth/auth-operations';
+import { current } from './redux/auth/auth-operations';
 
 const SharedLayout = lazy(() => import('shared/SharedLayout/SharedLayout'));
 const MainPage = lazy(() => import('pages/MainPage/MainPage'));

@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { getOrder } from 'redux/order/operations';
+import { getOrder } from '../../../redux/order/operations';
 
-import { loading, error } from 'redux/products/selectors';
+import { loading, error } from '../../../redux/products/selectors';
 
 import Loader from 'shared/Loader/Loader';
 
@@ -15,7 +15,7 @@ import {
 } from './order-detail.jsx.styled';
 
 import { NoItemsOnPage } from 'pages/ShopPage/shop-page.styled';
-import { getOrderDetails } from 'redux/order/selectors';
+import { getOrderDetails } from '../../../redux/order/selectors';
 
 const OrderDetail = () => {
   let orderItems = useSelector(getOrderDetails);
